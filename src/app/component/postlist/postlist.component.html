@@ -1,0 +1,23 @@
+<br>
+<div class="container" style="width: 80%; margin: auto;">
+    <img src="./assets/poster.jpg" style="width: 100%; height: 300px; border-radius: 10px;">
+    
+    <h2>Blogs</h2>
+    <ng-container *ngFor="let data of Data">
+        <div class="news-container">
+            <div class="news-card">
+                <div>
+                    <img src="{{'data:image/jpg;base64,' + data.url}}" style="width:100%; height:200px; border-radius: 5px;">
+                </div>
+                <div class="card-body">
+                <p class="card-text"><b> {{data.title}}</b></p>
+                <p class="card-text"> {{data.author}}</p>
+                </div>
+                <div class="news-buttons">
+                    <button class="btn btn-detail" routerLink = '/detail/{{data.id}}'>Details</button>
+                </div>
+            </div>
+        </div>  
+    </ng-container>
+</div>
+

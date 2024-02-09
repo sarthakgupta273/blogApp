@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-expand-lg fixed-top" style="margin-top: -1%;">
+  <div class="container-fluid" style="background-color:rgb(2, 189, 252); ">
+    <a class="navbar-brand" routerLink="post">
+      <img src="./assets/icon.jpeg" width="30" height="22" class="d-inline-block align-text-top" >
+      Football
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+      </span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="post">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="addpost">Post</a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <button *ngIf="isVisible" style="margin-right: 10px;" (click)="toggleVis()" routerLink="">
+          logout</button>
+        <button type="button" (click)="toggleVisibility()" style="border-radius: 100%;">
+          <img src="./assets/images.png" width="30" height="22" style="border-radius: 100%;"/>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+<br>
+

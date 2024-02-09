@@ -1,0 +1,28 @@
+<!-- login.component.html -->
+<br><br><br>
+
+
+<form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+  <h2 style="text-align: center;">Login</h2>
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" [(ngModel)]="data.username" required>
+    <!-- Display validation error message if username is not valid -->
+    <div *ngIf="loginForm.controls['username']?.invalid && (loginForm.controls['username']?.touched || loginForm.submitted)">
+      Please enter a valid username.
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" [(ngModel)]="data.password" required>
+    <!-- Display validation error message if password is not valid -->
+    <div *ngIf="loginForm.controls['password']?.invalid && (loginForm.controls['password']?.touched || loginForm.submitted)">
+      Please enter a valid password.
+    </div>
+  </div>
+
+  <button type="submit" [disabled]="!loginForm.valid">Login</button>
+  <div style="width: 100%; text-align: center;">If you don't have an account? <p style="color:rgb(2, 189, 252);" routerLink="/register">Register</p></div>
+</form>
+<br><br><br>

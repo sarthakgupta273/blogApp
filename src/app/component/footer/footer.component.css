@@ -1,0 +1,32 @@
+/* styles.css */
+
+/* Footer styling */
+footer {
+    background-color: lightblue;
+    color: black;
+    text-align: center;
+}
+
+footer .container {
+    background-color: rgb(60, 187, 230);
+    padding: 4px 0; /* Adjust as needed */
+}
+
+footer section {
+    margin-bottom: 4px; /* Adjust as needed */
+}
+
+/* Social media icons styling */
+footer .btn-floating {
+    background-color: transparent;
+    border: 1px solid #343a40;
+    color: #343a40;
+    margin: 1px;
+}
+
+/* Copyright text styling */
+footer .text-center {
+    background-color: rgb(97, 97, 173);
+    padding: 10px; /* Adjust as needed */
+    color: white;
+}
